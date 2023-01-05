@@ -1,0 +1,50 @@
+.event-cover {
+    background-image: url('https://i.dailymail.co.uk/i/pix/2015/02/20/25C18A7D00000578-2961502-Tottenham_have_the_go_ahead_for_their_new_56_000_plus_capacity_s-a-22_1424436421435.jpg');
+    height: 400px;
+    background-position: center center;
+    background-size: cover;
+  }
+   /* the .mdl-grid rules are probably allready in place in our css*/
+  .mdl-grid {
+    max-width: calc(1600px - 16px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  /* Add all the following rules*/
+  .mdl-grid.two-columns > .content-left {
+    margin: 0 8px 8px 8px;
+    width: 600px !important;
+    max-width: 600px;
+    height: 1000px; /* just for test purposes */
+    background-color: red; /* just for test purposes */
+  }
+  
+  .mdl-grid.two-columns > .content-right {
+    display: none;
+    margin: 0 8px 8px 8px;
+    width: calc(40% - 16px) !important;
+    max-width: 430px;
+    height: 1000px; /* just for test purposes */
+    background-color: blue; /* just for test purposes */
+  }
+  
+  .mdl-grid.two-columns > .content-right > .mdl-card {
+    width: 100% !important;
+  }
+  
+  .mdl-grid.two-columns > .content-left > .mdl-card {
+    width: 100% !important;
+  }
+  
+  /* Place these rules under the other @media rules in the css file*/
+  @media screen and (min-width: 840px) {
+    .mdl-grid.two-columns > .content-left {
+      width: calc(60% - 16px) !important;
+    }
+    .mdl-grid.two-columns > .content-right {
+      display: inline;
+    } 
+  }
